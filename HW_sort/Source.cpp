@@ -31,11 +31,22 @@ start:
 		// иначе - лишь первую треть.
 		// остальную часть массива не сортировать а расположить в обратном порядке.
 
-		const int n = 14;
-		double a[n] = { 7, 13, 25, 8, -11, -19, 0, -5, -20, 0, 30, 45, -6, 15 };
+		const int size_max = 20;
+		int a[size_max];
+		int n;
+
 		double sum = 0;
 		int i, pass;
 		int border;
+
+		cout << "введите количество элементов массива до 20 элементов включительно: ";
+		cin >> n;
+		for (i = 0; i < n; i++)
+		{
+			a[i] = -15 + rand() % 50;
+			cout << a[i] << " ";
+		}
+		cout << endl;
 
 		for (i = 0; i < n; i++)
 			sum = sum + a[i];
@@ -78,7 +89,7 @@ start:
 		for (i = 0; i < border; i++)
 			cout << a[i] << " ";
 		cout << "reverse order part: ";
-		for(i=border; i<n; i++)
+		for (i = border; i<n; i++)
 			cout << a[i] << " ";
 
 		cout << endl << endl;
@@ -88,7 +99,6 @@ start:
 	{
 		const int n = 8;
 		double a[n] = { 4, 7, 0, 20, 17, 11, 1, 18 };
-		/*double a[n] = { 7, 13, 25, 8, 11, 19, 0, -5 };*/
 
 		int i = 0;
 		double min_e;
